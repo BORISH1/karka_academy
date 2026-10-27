@@ -17,18 +17,18 @@ export default function TestimonialsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50/60 via-white to-white py-16 lg:py-24 border-b border-neutral-100">
+      <section className="bg-surface border-b border-border py-16 lg:py-24 transition-colors">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100/70 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3.5 py-1 rounded-full">
             Testimonials & Reviews
           </span>
-          <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
-            Trusted by Students, Parents &{" "}
-            <span className="bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="mt-4 text-4xl sm:text-5xl font-black text-foreground tracking-tight">
+            Trusted by Students, Parents &{' '}
+            <span className="bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
               Academic Leaders
             </span>
           </h1>
-          <p className="mt-6 text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             Read honest feedback from the thousands of learners and guardians whose futures were shaped by our career roadmaps.
           </p>
 
@@ -37,11 +37,12 @@ export default function TestimonialsPage() {
             {categories.map((cat) => (
               <button
                 key={cat}
+                type="button"
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   filter === cat
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'bg-white text-neutral-600 border border-neutral-200 hover:bg-neutral-100'
+                    ? 'bg-primary text-primary-foreground shadow-sm scale-105'
+                    : 'bg-card text-muted-foreground border border-border hover:bg-muted hover:text-foreground'
                 }`}
               >
                 {cat}s
@@ -52,37 +53,37 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-20 bg-neutral-50/60">
+      <section className="py-20 bg-background transition-colors flex-1">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl border border-neutral-200/90 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow"
+                className="bg-card rounded-3xl border border-border shadow-sm p-7 flex flex-col justify-between hover:shadow-xl transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-amber-500 font-bold text-sm tracking-widest">
-                      {"★".repeat(item.rating)}
+                      {'★'.repeat(item.rating)}
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-blue-50 text-blue-700">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                       {item.category}
                     </span>
                   </div>
 
-                  <p className="text-neutral-600 text-sm leading-relaxed mb-6 italic">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-6 italic">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="border-t border-neutral-100 pt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm">
+                <div className="border-t border-border pt-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
                     {item.avatarText}
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral-900 text-sm">{item.name}</h4>
-                    <p className="text-xs text-neutral-500">{item.role}</p>
-                    <p className="text-[11px] text-blue-600 font-medium">{item.affiliation}</p>
+                    <h4 className="font-bold text-foreground text-sm">{item.name}</h4>
+                    <p className="text-xs text-muted-foreground">{item.role}</p>
+                    <p className="text-[11px] text-primary font-medium">{item.affiliation}</p>
                   </div>
                 </div>
               </div>
@@ -92,13 +93,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Lead CTA */}
-      <section className="py-16 bg-white border-t border-neutral-200 text-center">
+      <section className="py-20 bg-surface border-t border-border text-center transition-colors">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">Experience the Difference Firsthand</h2>
-          <p className="mt-3 text-neutral-600 text-sm">Schedule your complimentary 30-minute career diagnostic call.</p>
+          <h2 className="text-2xl sm:text-3xl font-black text-foreground">Experience the Difference Firsthand</h2>
+          <p className="mt-3 text-muted-foreground text-xs sm:text-sm">Schedule your complimentary 30-minute career diagnostic call.</p>
           <div className="mt-6 flex justify-center">
             <Link href="/contact">
-              <Button className="px-8 py-3 text-sm font-bold shadow-md">
+              <Button size="lg" className="font-bold shadow-md">
                 Get Started for Free
               </Button>
             </Link>
