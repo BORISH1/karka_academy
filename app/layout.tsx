@@ -13,11 +13,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://youaspirant.com'),
   title: 'You Aspirant | Career Guidance, Mentorship & Job-Ready Bootcamps',
   description:
     'Guiding students, school leavers, and working professionals to make confident career choices with 1-on-1 counseling, psychometric profiling, and practical tech bootcamps.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
+  openGraph: {
+    title: 'You Aspirant | Career Guidance, Mentorship & Job-Ready Bootcamps',
+    description:
+      'Guiding students, school leavers, and working professionals to make confident career choices.',
+    images: [{ url: '/logo.png', width: 1774, height: 887, alt: 'You Aspirant Logo' }],
   },
 };
 

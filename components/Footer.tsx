@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { AnimationControl } from '@/components/AnimationControl';
 
 export const Footer = () => (
@@ -6,13 +7,16 @@ export const Footer = () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="space-y-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="w-7 h-7 rounded-lg bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-base">
-              Y
-            </span>
-            <span className="text-xl font-black text-foreground">
-              You <span className="text-primary">Aspirant</span>
-            </span>
+          <Link href="/" className="inline-block group" aria-label="You Aspirant Home">
+            <div className="relative h-10 sm:h-12 w-40 sm:w-48 transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white/95 dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-sm">
+              <Image
+                src="/logo.png"
+                alt="You Aspirant Logo"
+                fill
+                className="object-contain object-left"
+                sizes="192px"
+              />
+            </div>
           </Link>
           <p className="text-xs text-muted-foreground leading-relaxed">
             Empowering students, school leavers, and ambitious professionals with scientific career profiling, hands-on bootcamps, and 1-on-1 industry mentorship.

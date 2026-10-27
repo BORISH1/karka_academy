@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
@@ -41,18 +42,22 @@ export const Header = () => {
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-surface/90 backdrop-blur-md shadow-sm border-b border-border py-2.5'
-            : 'bg-surface/70 backdrop-blur-sm border-b border-border/50 py-4'
+            : 'bg-surface/70 backdrop-blur-sm border-b border-border/50 py-3.5'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-lg shadow-sm group-hover:scale-105 transition-transform">
-              Y
-            </span>
-            <span className="text-xl sm:text-2xl font-black tracking-tight text-foreground">
-              You <span className="text-primary">Aspirant</span>
-            </span>
+          <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="You Aspirant Home">
+            <div className="relative h-10 sm:h-12 w-40 sm:w-48 transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white/95 dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-sm">
+              <Image
+                src="/logo.png"
+                alt="You Aspirant Logo"
+                fill
+                priority
+                className="object-contain object-left"
+                sizes="(max-width: 640px) 160px, 192px"
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
