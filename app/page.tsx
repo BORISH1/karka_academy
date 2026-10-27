@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/Button';
-import { AnimatedHeroBackground } from '@/components/AnimatedHeroBackground';
+import { HeroVideoBackground } from '@/components/HeroVideoBackground';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
-import { VideoAppShowcase } from '@/components/VideoAppShowcase';
 import { ProcessJourney } from '@/components/ProcessJourney';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { FaqAccordion } from '@/components/FaqAccordion';
@@ -14,9 +13,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Interactive Animated Background */}
-      <section className="relative overflow-hidden pt-20 pb-28 lg:pt-28 lg:pb-36 border-b border-border/60">
-        <AnimatedHeroBackground />
+      {/* Front Hero Section with Ambient Video Background */}
+      <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center pt-24 pb-24 lg:pt-32 lg:pb-32 border-b border-border/60">
+        <HeroVideoBackground />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -47,28 +46,25 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/courses">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto backdrop-blur-md bg-surface/80 hover:bg-surface border border-border shadow-md">
                   Explore Courses & Fees →
                 </Button>
               </Link>
             </div>
 
             {/* Quick Proof Badges */}
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-medium">
-              <span className="flex items-center gap-1.5">
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-muted-foreground font-semibold">
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
                 <span className="text-emerald-500 font-bold">✓</span> 100% Free Initial Diagnostic Call
               </span>
-              <span className="flex items-center gap-1.5">
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
                 <span className="text-emerald-500 font-bold">✓</span> 1-on-1 Senior Industry Mentors
               </span>
-              <span className="flex items-center gap-1.5">
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
                 <span className="text-emerald-500 font-bold">✓</span> Placement Referral Network
               </span>
             </div>
           </div>
-
-          {/* Interactive Video App Showcase */}
-          <VideoAppShowcase />
         </div>
       </section>
 

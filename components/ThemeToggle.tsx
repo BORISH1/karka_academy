@@ -11,12 +11,6 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <div className="w-9 h-9 rounded-full bg-muted border border-border animate-pulse" />
-    );
-  }
-
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
@@ -38,7 +32,7 @@ export function ThemeToggle() {
       {/* Sun icon */}
       <svg
         className={`w-4 h-4 transition-all duration-500 absolute ${
-          resolvedTheme === 'light'
+          !mounted || resolvedTheme === 'light'
             ? 'rotate-0 scale-100 opacity-100 text-amber-500'
             : '-rotate-90 scale-0 opacity-0'
         }`}
@@ -57,7 +51,7 @@ export function ThemeToggle() {
       {/* Moon icon */}
       <svg
         className={`w-4 h-4 transition-all duration-500 absolute ${
-          resolvedTheme === 'dark'
+          mounted && resolvedTheme === 'dark'
             ? 'rotate-0 scale-100 opacity-100 text-blue-400'
             : 'rotate-90 scale-0 opacity-0'
         }`}
@@ -74,7 +68,7 @@ export function ThemeToggle() {
       </svg>
 
       {/* System dot indicator */}
-      {theme === 'system' && (
+      {mounted && theme === 'system' && (
         <span className="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full bg-primary" />
       )}
     </button>
