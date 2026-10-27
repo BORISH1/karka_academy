@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/Button';
 import { AnimatedHeroBackground } from '@/components/AnimatedHeroBackground';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
+import { VideoAppShowcase } from '@/components/VideoAppShowcase';
 import { ProcessJourney } from '@/components/ProcessJourney';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { FaqAccordion } from '@/components/FaqAccordion';
@@ -65,6 +66,9 @@ export default function Home() {
               </span>
             </div>
           </div>
+
+          {/* Interactive Video App Showcase */}
+          <VideoAppShowcase />
         </div>
       </section>
 
