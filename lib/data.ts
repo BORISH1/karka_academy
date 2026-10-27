@@ -62,6 +62,7 @@ export interface Testimonial {
   role: string;
   affiliation: string;
   avatarText: string;
+  avatarUrl?: string;
   quote: string;
   rating: number;
 }
@@ -608,6 +609,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Software Engineer @ Thoughtworks',
     affiliation: 'Full Stack Alumnus',
     avatarText: 'DR',
+    avatarUrl: '/testimonials/deepak-rajan.jpg',
     quote: 'The mentorship at You Aspirant is night and day compared to generic YouTube tutorials or pre-recorded courses. Having senior engineers review your pull requests and critique your system design gave me the edge to crack Thoughtworks.',
     rating: 5
   },
@@ -618,6 +620,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Professor & Parent of 12th Student',
     affiliation: 'Career Counselling Advisory',
     avatarText: 'RN',
+    avatarUrl: '/testimonials/r-natarajan.jpg',
     quote: 'My daughter was under immense peer pressure to prepare for NEET even though her heart was in design and technology. The counseling team at You Aspirant patiently sat with us, explained career viability with data, and gave our family complete clarity. Best decision we made.',
     rating: 5
   },
@@ -628,6 +631,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Data Analyst @ Capgemini',
     affiliation: 'Non-Tech to Analytics Track',
     avatarText: 'SB',
+    avatarUrl: '/testimonials/sneha-banerjee.jpg',
     quote: 'Coming from a non-engineering background, mathematics and coding felt daunting. The instructors never made me feel slow. They answered every silly doubt and guided me until my SQL queries and Python code were spotless.',
     rating: 5
   },
@@ -638,6 +642,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Head of Placements',
     affiliation: 'Sri Krishna Institute of Technology',
     avatarText: 'KV',
+    avatarUrl: '/testimonials/k-venkatesh.jpg',
     quote: 'You Aspirant conducted a 6-week intensive campus accelerator for our 2024 batch. Our placement percentage increased from 68% to 92%, with multiple students securing dream offers above 8 LPA. They are our trusted training partner.',
     rating: 5
   },
@@ -648,6 +653,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Cloud Support Engineer @ Infosys',
     affiliation: 'Cloud & DevOps Batch',
     avatarText: 'MF',
+    avatarUrl: '/testimonials/mohammad-farooq.jpg',
     quote: 'The live labs on real AWS environments are the best part. When interviewers asked scenario-based questions about VPC peering and Kubernetes pod failures, I could answer from direct muscle memory because we broke and fixed clusters in class.',
     rating: 5
   },
@@ -658,6 +664,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Chartered Accountant & Parent',
     affiliation: 'Higher Education Advisory',
     avatarText: 'LN',
+    avatarUrl: '/testimonials/lakshmi-narayanan.jpg',
     quote: 'Selecting colleges can be an expensive minefield of advertisements and empty promises. You Aspirant\'s impartial analysis of placements, faculty credentials, and genuine student feedback saved us lakhs of rupees and years of regret.',
     rating: 5
   }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { testimonialsData } from '@/lib/data';
 import { useTheme } from '@/components/ThemeProvider';
 
@@ -73,12 +74,24 @@ export function TestimonialCarousel() {
           </p>
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-border">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-accent text-white font-extrabold flex items-center justify-center text-sm shadow-md">
-                {current.avatarText}
+            <div className="flex items-center gap-4">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-primary/30 shadow-md shrink-0 bg-muted">
+                {current.avatarUrl ? (
+                  <Image
+                    src={current.avatarUrl}
+                    alt={current.name}
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-tr from-primary to-accent text-white font-extrabold flex items-center justify-center text-sm">
+                    {current.avatarText}
+                  </div>
+                )}
               </div>
               <div>
-                <h4 className="font-bold text-foreground text-base">{current.name}</h4>
+                <h4 className="font-bold text-foreground text-base sm:text-lg">{current.name}</h4>
                 <p className="text-xs text-muted-foreground">{current.role}</p>
                 <p className="text-[11px] text-primary font-medium">{current.affiliation}</p>
               </div>

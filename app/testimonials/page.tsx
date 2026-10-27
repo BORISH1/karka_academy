@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { testimonialsData } from '@/lib/data';
 import { Button } from '@/components/Button';
 
@@ -77,8 +78,20 @@ export default function TestimonialsPage() {
                 </div>
 
                 <div className="border-t border-border pt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
-                    {item.avatarText}
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-primary/30 shadow-sm shrink-0 bg-muted">
+                    {item.avatarUrl ? (
+                      <Image
+                        src={item.avatarUrl}
+                        alt={item.name}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-tr from-primary to-accent text-white font-extrabold flex items-center justify-center text-xs">
+                        {item.avatarText}
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground text-sm">{item.name}</h4>
