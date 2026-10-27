@@ -14,54 +14,54 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Front Hero Section with Ambient Video Background */}
-      <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[88vh] flex items-center justify-center pt-24 pb-24 lg:pt-32 lg:pb-32 border-b border-border/60">
+      <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-24 pb-24 lg:pt-32 lg:pb-32 text-white border-b border-white/10">
         <HeroVideoBackground />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Animated Announcement Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20 mb-8 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-blue-500/15 text-blue-300 border border-blue-400/30 mb-8 backdrop-blur-md shadow-lg shadow-blue-500/10">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
               <span>Admissions Open for 2025 Placement Cohorts</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-6 drop-shadow-md">
               Discover Your Potential.{' '}
-              <span className="bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300 bg-clip-text text-transparent">
                 Build an Unstoppable Career.
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10">
+            <p className="text-base sm:text-xl text-slate-200/90 max-w-2xl mx-auto leading-relaxed mb-10 font-medium drop-shadow-sm">
               Transforming ambiguity into career clarity. Scientific 1-on-1 career counselling, live software engineering bootcamps, and guaranteed mock interview coaching.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <Button size="lg" className="w-full sm:w-auto shadow-xl">
+                <Button size="lg" className="w-full sm:w-auto shadow-2xl shadow-primary/40 bg-primary hover:bg-primary/90 text-white font-bold">
                   Book Free Career Counselling Session
                 </Button>
               </Link>
               <Link href="/courses">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto backdrop-blur-md bg-surface/80 hover:bg-surface border border-border shadow-md">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto backdrop-blur-md bg-white/10 hover:bg-white/20 text-white border border-white/20 shadow-lg font-semibold">
                   Explore Courses & Fees →
                 </Button>
               </Link>
             </div>
 
             {/* Quick Proof Badges */}
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-muted-foreground font-semibold">
-              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
-                <span className="text-emerald-500 font-bold">✓</span> 100% Free Initial Diagnostic Call
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-slate-300 font-semibold">
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+                <span className="text-emerald-400 font-bold">✓</span> 100% Free Initial Diagnostic Call
               </span>
-              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
-                <span className="text-emerald-500 font-bold">✓</span> 1-on-1 Senior Industry Mentors
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+                <span className="text-emerald-400 font-bold">✓</span> 1-on-1 Senior Industry Mentors
               </span>
-              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface/75 dark:bg-surface-elevated/75 backdrop-blur-md border border-border/80 shadow-sm">
-                <span className="text-emerald-500 font-bold">✓</span> Placement Referral Network
+              <span className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+                <span className="text-emerald-400 font-bold">✓</span> Placement Referral Network
               </span>
             </div>
           </div>
