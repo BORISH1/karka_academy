@@ -48,13 +48,23 @@ export const Header = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group shrink-0" aria-label="You Aspirant Home">
-            <div className="relative h-14 sm:h-16 lg:h-[70px] w-44 sm:w-56 lg:w-64 transition-transform duration-200 group-hover:scale-[1.03] dark:bg-white/95 dark:px-3.5 dark:py-2 dark:rounded-2xl dark:shadow-sm">
+            <div className="relative h-14 sm:h-16 lg:h-[70px] w-44 sm:w-56 lg:w-64 transition-transform duration-200 group-hover:scale-[1.03]">
+              {/* Light Mode Logo */}
               <Image
                 src="/logo.png"
                 alt="You Aspirant Logo"
                 fill
                 priority
-                className="object-contain object-left"
+                className="object-contain object-left dark:hidden"
+                sizes="(max-width: 640px) 176px, (max-width: 1024px) 224px, 256px"
+              />
+              {/* Dark Mode Logo with crisp white text & glowing accents on transparent background */}
+              <Image
+                src="/logo-dark.png"
+                alt="You Aspirant Logo"
+                fill
+                priority
+                className="object-contain object-left hidden dark:block drop-shadow-[0_2px_16px_rgba(59,130,246,0.3)]"
                 sizes="(max-width: 640px) 176px, (max-width: 1024px) 224px, 256px"
               />
             </div>
