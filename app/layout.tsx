@@ -4,7 +4,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { AiCareerAssistant } from '@/components/AiCareerAssistant';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -61,7 +61,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <FloatingWhatsApp />
+          <AiCareerAssistant />
         </ThemeProvider>
       </body>
     </html>

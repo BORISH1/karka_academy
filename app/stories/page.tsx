@@ -102,8 +102,8 @@ export default function StoriesPage() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-neutral-100 font-bold shadow-xl">
-                Book Free Consultation
+              <Button variant="white" size="lg" className="shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                Book Free Consultation →
               </Button>
             </Link>
           </div>
