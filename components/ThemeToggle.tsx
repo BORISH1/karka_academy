@@ -32,7 +32,7 @@ export function ThemeToggle() {
       {/* Sun icon */}
       <svg
         className={`w-4 h-4 transition-all duration-500 absolute ${
-          !mounted || resolvedTheme === 'light'
+          mounted && resolvedTheme === 'light'
             ? 'rotate-0 scale-100 opacity-100 text-amber-500'
             : '-rotate-90 scale-0 opacity-0'
         }`}
@@ -51,7 +51,7 @@ export function ThemeToggle() {
       {/* Moon icon */}
       <svg
         className={`w-4 h-4 transition-all duration-500 absolute ${
-          mounted && resolvedTheme === 'dark'
+          !mounted || resolvedTheme === 'dark'
             ? 'rotate-0 scale-100 opacity-100 text-blue-400'
             : 'rotate-90 scale-0 opacity-0'
         }`}
