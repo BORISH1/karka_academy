@@ -8,13 +8,13 @@ export const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="space-y-4">
           <Link href="/" className="inline-block group" aria-label="You Aspirant Home">
-            <div className="relative h-10 sm:h-12 w-40 sm:w-48 transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white/95 dark:px-2.5 dark:py-1 dark:rounded-xl dark:shadow-sm">
+            <div className="relative h-16 sm:h-20 w-52 sm:w-64 transition-transform duration-200 group-hover:scale-[1.03] dark:bg-white/95 dark:px-3.5 dark:py-2 dark:rounded-2xl dark:shadow-sm">
               <Image
                 src="/logo.png"
                 alt="You Aspirant Logo"
                 fill
                 className="object-contain object-left"
-                sizes="192px"
+                sizes="(max-width: 640px) 208px, 256px"
               />
             </div>
           </Link>

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'You Aspirant | Career Guidance, Mentorship & Job-Ready Bootcamps',
     description:
       'Guiding students, school leavers, and working professionals to make confident career choices.',
-    images: [{ url: '/logo.png', width: 1774, height: 887, alt: 'You Aspirant Logo' }],
+    images: [{ url: '/logo.png', width: 1710, height: 649, alt: 'You Aspirant Logo' }],
   },
 };
 
