@@ -31,7 +31,7 @@ export const Footer = () => (
             Empowering students, school leavers, and ambitious professionals with scientific career profiling, hands-on bootcamps, and 1-on-1 industry mentorship.
           </p>
           <div className="pt-2">
-            <AnimationControl />
+            {/* <AnimationControl /> */}
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export const Footer = () => (
       <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
         <p>© {new Date().getFullYear()} You Aspirant. All rights reserved.</p>
         <p className="text-[11px]">
-          Designed with accessibility (WCAG AA), smooth 60fps animations & dark theme support.
+          Designed by <a href="https://borishningombam.in">Ningombam Borish Singh</a>
         </p>
       </div>
     </div>

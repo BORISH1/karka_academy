@@ -83,14 +83,14 @@ export function HeroVideoBackground() {
           aria-label={isPlaying ? 'Pause background video' : 'Play background video'}
           className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/20 text-xs font-semibold text-white transition-all shadow-xl group cursor-pointer"
         >
-          <span
+          {/* <span
             className={`w-2 h-2 rounded-full transition-colors ${
               isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-slate-400'
             }`}
-          />
-          <span className="text-[11px] text-slate-200 group-hover:text-white">
+          /> */}
+          {/* <span className="text-[11px] text-slate-200 group-hover:text-white">
             {isPlaying ? 'Live Video' : 'Paused'}
-          </span>
+          </span> */}
           {isPlaying ? (
             <svg className="w-3.5 h-3.5 text-slate-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />

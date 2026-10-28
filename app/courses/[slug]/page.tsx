@@ -34,7 +34,7 @@ export default function CourseDetailPage({ params }: PageProps) {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header Banner */}
-      <section className="bg-surface border-b border-border py-14 lg:py-20 transition-colors">
+      <section className="bg-surface border-b border-border pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-14 transition-colors">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="flex items-center gap-2 text-xs text-muted-foreground mb-6">
             <Link href="/" className="hover:text-primary transition-colors">

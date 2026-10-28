@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Front Hero Section with Ambient Video Background */}
-      <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center pt-24 pb-24 lg:pt-32 lg:pb-32 text-white border-b border-white/10">
+      <section className="relative overflow-hidden flex flex-col justify-center items-center pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24 text-white border-b border-white/10">
         <HeroVideoBackground />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Animated Announcement Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-blue-500/15 text-blue-300 border border-blue-400/30 mb-8 backdrop-blur-md shadow-lg shadow-blue-500/10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-blue-500/15 text-blue-300 border border-blue-400/30 mb-5 sm:mb-6 backdrop-blur-md shadow-lg shadow-blue-500/10">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
               <span>Admissions Open for 2025 Placement Cohorts</span>
             </div>

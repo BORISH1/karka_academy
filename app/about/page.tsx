@@ -58,7 +58,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
-      <section className="bg-surface border-b border-border py-16 lg:py-24 transition-colors">
+      <section className="bg-surface border-b border-border pt-8 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-16 transition-colors">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
           <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3.5 py-1 rounded-full">
             Our Mission & Story
